@@ -4,7 +4,7 @@ import java.util.Date;
 
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
+//import javax.xml.bind.annotation.XmlRootElement;
 
 public class Book {
 
@@ -13,6 +13,7 @@ public class Book {
 	private String title;
 	private String genre;
 	private double price;
+	private double cost;
 	private Date publish_date;
 	private String description;
 
@@ -20,7 +21,7 @@ public class Book {
 
 	}
 
-	public Book(String id, String author, String title, String genre, double price, Date publish_date, String description)
+	public Book(String id, String author, String title, String genre, double price, double cost, Date publish_date, String description)
 	{
 		super();
 		this.id = id;
@@ -28,11 +29,16 @@ public class Book {
 		this.title = title;
 		this.genre = genre;		
 		this.price = price;
+		this.cost = cost;
 		this.publish_date = publish_date;
 		this.description = description;
 	}
 	
  
+
+	public Book(String string) {
+		
+	}
 
 	public String getId() {
 		return id;
@@ -95,6 +101,15 @@ public class Book {
 	@XmlElement
 	public void setDescription(String description) {
 		this.description = description;
+	}
+	
+	public double getCost() {
+		return cost;
+	}
+	
+	@XmlElement
+	public void setCost(double cost) {
+		this.cost = cost;
 	}
 
 	
