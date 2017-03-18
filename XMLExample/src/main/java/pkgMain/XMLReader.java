@@ -70,7 +70,7 @@ public class XMLReader {
 		}
 	}
 
-	private static Catalog ReadXMLFile() {
+	public static Catalog ReadXMLFile() {
 
 		Catalog cat = null;
 
